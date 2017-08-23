@@ -11,12 +11,27 @@ public class Calentador
     
     public void calentar()
     {
-        temperatura = temperatura + incremento;
+        if(temperatura+3 < 30)
+        {
+            temperatura = temperatura + incremento;
+        }
+        else
+        {
+            System.out.println("La temperatura ya no puede subir mas");
+        }
     }
     
     public void enfriar()
     {
-        temperatura = temperatura - incremento;
+        if(temperatura-3 > -10)
+        {
+            temperatura = temperatura - incremento;
+        }
+        else
+        {
+            System.out.println("La temperatura ya no puede bajar mas");
+        }
+        
     }
     
     public void temperaturaActual()
