@@ -2,16 +2,20 @@ public class Calentador
 {
     private int temperatura;
     private int incremento;
+    private int mini;
+    private int max;
     
-    Calentador()
+    Calentador(int minimo, int maximo)
     {
         temperatura = 15;
         incremento = 3;
+        mini = minimo;
+        max = maximo;
     }
     
     public void calentar()
     {
-        if(temperatura+3 < 30)
+        if(temperatura+3 <= max)
         {
             temperatura = temperatura + incremento;
         }
@@ -23,7 +27,7 @@ public class Calentador
     
     public void enfriar()
     {
-        if(temperatura-3 > -10)
+        if(temperatura-3 >= mini)
         {
             temperatura = temperatura - incremento;
         }
@@ -34,8 +38,8 @@ public class Calentador
         
     }
     
-    public void temperaturaActual()
+    public int temperaturaActual()
     {
-       System.out.println("La Temperatura actual es de: " + temperatura); 
+       return(temperatura);
     }
 }
