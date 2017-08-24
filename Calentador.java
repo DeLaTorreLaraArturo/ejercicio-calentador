@@ -13,9 +13,21 @@ public class Calentador
         max = maximo;
     }
     
+    public void modificarIncremento(int inc)
+    {
+        if(inc > 0)
+        {
+            incremento = inc;
+        }
+        else
+        {
+            incremento = 0;
+        }
+    }
+    
     public void calentar()
     {
-        if(temperatura+3 <= max)
+        if(temperatura+incremento <= max)
         {
             temperatura = temperatura + incremento;
         }
@@ -27,7 +39,7 @@ public class Calentador
     
     public void enfriar()
     {
-        if(temperatura-3 >= mini)
+        if(temperatura-incremento >= mini)
         {
             temperatura = temperatura - incremento;
         }
